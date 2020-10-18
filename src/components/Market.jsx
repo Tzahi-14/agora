@@ -5,7 +5,6 @@ import Item from './Item'
 @inject("AgoraList","Items")
 @observer
 class Market extends Component {
-
     constructor(){
         super()
         this.state={

@@ -7,12 +7,14 @@ class Item extends Component {
 
     buyItem = () =>{
         console.log(this.props)
-        this.props.AgoraList.buyItem(this.props.Items.name)
+        console.log(this.props.Items)
+        console.log(this.props.item)
+        this.props.AgoraList.buyItem(this.props.item)
     }
 
     changePrice = () =>{
         const newPrice = prompt("enter new price")
-        this.props.AgoraList.changePrice(this.props.Items.name, newPrice)
+        this.props.AgoraList.changePrice(this.props.item.name, newPrice)
     }
 
     render() {
