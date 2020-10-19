@@ -9,7 +9,7 @@ class Item extends Component {
         console.log(this.props)
         console.log(this.props.Items)
         console.log(this.props.item)
-        this.props.AgoraList.buyItem(this.props.item)
+        this.props.AgoraList.buyItem(this.props.item.name)
     }
 
     changePrice = () =>{
