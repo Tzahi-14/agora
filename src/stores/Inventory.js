@@ -7,10 +7,7 @@ export class Inventory{
         return this.list.length
     }
     @action addItem = (name,price=0,quantity=1) =>{
-        console.log(name)
-        console.log(this.list)
         let item = this.list.find(i=>i.name===name)
-        console.log(item)
         if(item){
             item.quantity++
         }
@@ -19,15 +16,12 @@ export class Inventory{
         }
     }
     @action buyItem = (name)=>{
-        console.log(name)
         let item = this.list.find(i=> i.name===name)
         let itemIndex = this.list.findIndex(i=> i.name===name)
         if(item.quantity>1){
-            console.log(item)
             item.quantity--
         }
         else{
-            console.log(item)
             this.list.splice(itemIndex,1)
         }
     }

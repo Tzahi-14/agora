@@ -11,11 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* {console.log(this.props.store)} */}
-        {/* {this.props.AgoraList.list.map((i,index) => <Item key={index} item={i} AgoraList={this.props.AgoraList} /> )} */}
         {<Market /> }
-        {/* <Item />
-        <Market /> */}
       </div>
     )
   }

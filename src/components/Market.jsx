@@ -13,15 +13,12 @@ class Market extends Component {
     }
    
     handleChange = (e) => {
-        // console.log(e.target.value)
         this.setState({
           newItem: e.target.value
         })
       }
     
       addItem = () => {
-          console.log(this.state.newItem)
-          console.log(this.props)
         this.props.AgoraList.addItem(this.state.newItem)
         this.setState({
             newItem: ""
@@ -31,7 +28,6 @@ class Market extends Component {
     render(){
         return(
             <div>
-               { console.log(this.props)}
                 <input type="text" placeholder="Enter your item" value={this.state.newItem} onChange={this.handleChange}/>
                 <button onClick={this.addItem}>Add item</button>
                 {this.props.AgoraList.list.map((i,index) => <Item key={index} item={i} /> )}

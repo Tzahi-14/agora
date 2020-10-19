@@ -6,9 +6,6 @@ import { inject, observer } from 'mobx-react'
 class Item extends Component {
 
     buyItem = () =>{
-        console.log(this.props)
-        console.log(this.props.Items)
-        console.log(this.props.item)
         this.props.AgoraList.buyItem(this.props.item.name)
     }
 
@@ -19,16 +16,11 @@ class Item extends Component {
 
     render() {
         let item = this.props.item
-        console.log(this.props)
         return (
             <div>
                 <ul>
-                {console.log(this.props)}
-                    <li onDoubleClick={this.changePrice}> {item.quantity} {item.name} available at ${item.price} per item <button className="buy-button" onClick={this.buyItem}>Buy</button></li>
-                    
+                    <li onDoubleClick={this.changePrice}> {item.quantity} {item.name} available at ${item.price} per item <button className="buy-button" onClick={this.buyItem}>Buy</button></li>  
                 </ul>
-
-
             </div>
         )
     }
